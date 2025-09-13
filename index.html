@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Widening Participation – GSTT</title>
+<style>
+  body { font-family: Arial, sans-serif; background-color: #fff; margin: 0; padding: 0; color: #333; }
+  header { background-color: #005eb8; padding: 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+  .logo-title { display: flex; align-items: center; }
+  .logo-title img { height: 120px; }
+  .controls { display: flex; align-items: center; gap: 1rem; margin-top: 1rem; }
+  .controls input[type="text"] { padding: 0.5rem; font-size: 1rem; border-radius: 4px; border: none; }
+  .controls button { background: none; border: none; cursor: pointer; }
+  .controls button img { height: 28px; }
+  .section {
+  padding-left: 0;
+  padding-right: 0;
+}
+  .section.resources-section { padding-top: 1rem; padding-bottom: 2rem; }
+  h2 { color: #005eb8; font-size: 1.8rem; margin-bottom: 1rem; }
+ .intro {
+  max-width: none;        /* allow full width */
+  width: 99%;
+  margin-bottom: 2rem;
+  padding-right: 2rem;    /* optional spacing */
+}
+
+.intro h2 {
+  text-align: left;       /* align the title like Resources */
+}
+  .intro-text-align {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .intro-text-align p {
+    flex: 1;
+    min-width: 300px;
+    max-width: 900px;
+    text-align: left;
+    font-size: 1.25rem;
+    line-height: 1.8;
+  }
+
+  /* Video box styling */
+  .intro-video-container {
+    margin-left: 0;            /* flush left */
+    border: 3px solid #005eb8; /* colored box */
+    border-radius: 12px;
+    padding: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background-color: #fff;
+    display: inline-block;
+  }
+
+  .intro-video-container iframe {
+    width: 890px;
+    height: 450px;
+    border-radius: 8px;
+  }
+  .resources-container { display: flex; gap: 2rem; flex-wrap: wrap; }
+  .button-list { display: flex; flex-direction: column; gap: 1rem; flex: 1; min-width: 300px; }
+  .button { display: flex; justify-content: space-between; align-items: center; background-color: #0078d4; color: white; text-decoration: none; border: 2px solid #0078d4; border-radius: 4px; font-size: 1.1rem; font-weight: bold; padding: 1rem 1.5rem; box-sizing: border-box; cursor: pointer; transition: background-color 0.3s ease, color 0.3s ease; }
+  .button::after { content: '>'; font-size: 1.2rem; margin-left: 0.5rem; color: white; }
+  .button:hover { background-color: #ffffff; color: #000; border: 2px solid #005eb8; }
+  .button:hover::after { color: #000; }
+  .info-box { background-color: #f2f2f2; border-left: 6px solid #005eb8; padding: 1.5rem; border-radius: 8px; font-size: 1.15rem; line-height: 1.8; flex: 1; min-width: 300px; box-sizing: border-box; }
+  .info-box h3 { color: #005eb8; margin-top: 0; }
+  .button-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+  .contact-button { width: 100%; height: 105px; background-color: #0078d4; color: white; text-decoration: none; border: 2px solid #0078d4; border-radius: 10px; font-size: 15px; font-weight: 600; display: flex; align-items: center; justify-content: center; text-align: center; box-sizing: border-box; cursor: pointer; transition: background-color 0.3s ease, color 0.3s ease; }
+  .contact-button:hover { background-color: #ffffff; color: #000; border: 2px solid #005eb8; }
+  footer { background-color: #f2f2f2; text-align: center; padding: 1rem; font-size: 0.9rem; color: #666; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo-title">
+    <img src="GSTT_logo_social%20card.png" alt="GSTT Logo" />
+  </div>
+ <div class="controls">
+<div class="controls">
+  <div class="search-wrapper" style="position: relative; flex: 1;">
+    <input type="text" id="searchInput" placeholder="Search buttons..." aria-label="Search buttons" />
+    <div id="searchResults" class="search-results" 
+         style="display:none; position:absolute; top:100%; left:0; right:0; background:#fff; border:1px solid #ccc; border-radius:4px; z-index:1000; max-height:300px; overflow-y:auto;">
+    </div>
+  </div>
+
+  <button id="voiceToggle" aria-label="Toggle voice" aria-pressed="false">
+      <img src="speaker-off.png" alt="Voice Off" id="voiceIcon" />
+  </button>
+</div>
+</header>
+
+<div class="section intro">
+  <h2>Widening Participation</h2>
+  <div class="intro-text-align">
+  <!-- Video box on the left -->
+  <div class="intro-video-container">
+    <iframe id="introVideo" 
+            src="https://www.youtube.com/embed/-0XMQTkP87k" 
+            title="YouTube video" 
+            frameborder="0" 
+            allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- Paragraph to the right -->
+  <p>
+      Guy’s and St Thomas’ NHS Foundation Trust is committed to making NHS careers accessible to all, particularly for individuals from underrepresented or disadvantaged backgrounds. Recognising the barriers that can limit access to healthcare professions, the Trust actively works with local schools, colleges, and community organisations to offer meaningful opportunities. Through work experience placements, apprenticeships, internships, and targeted training programmes, participants gain practical skills, knowledge, and confidence to pursue careers in healthcare. These initiatives not only enhance employability but also inspire and empower residents by highlighting the wide range of NHS roles. Guided by our ambitious, inclusive, and caring values, we create accessible pathways that remove barriers, nurture potential, and help build a more representative, compassionate, and socially mobile healthcare workforce for the future.
+    </p>
+    </div>
+  </div>
+</div>
+<div class="section resources-section">
+  <h2>Resources</h2>
+  <div class="resources-container">
+    <div class="button-list">
+      <a href="work-experience.html" class="button">Work Experience</a>
+      <a href="https://forms.office.com/e/TZCq2dgzHN" target="_blank" rel="noopener" class="button">Work Experience Feedback Form</a>
+      <a href="http://gti/staffguide/equality/widening-participation/work-experience-placements.aspx" target="_blank" title="Internal link – GSTT network only" class="button">Friends and Family (Staff)</a>
+      <a href="next-steps.html" class="button">Friends and Family Next Steps (Staff)</a>
+      <a href="https://www.guysandstthomas.nhs.uk/jobs/apprenticeships" target="_blank" rel="noopener" class="button">Apprenticeships</a>
+      <a href="https://www.kcl.ac.uk/elective-placement-in-clinical-medicine-course" target="_blank" rel="noopener" class="button">Medical Elective Placement</a>
+      <a href="insurance-details.html" class="button">Insurance Details (Staff)</a>
+      <a href="mailto:gstt.wideningparticipation@nhs.uk?cc=gstt.medicalworkexperience@nhs.uk&subject=Further%20Help%20Required" class="button">Further Support</a>
+    </div>
+    <div class="info-box">
+      <h3>Resources</h3>
+      <p>Use the buttons on the left to access important information and forms. These resources are designed to make it easy for you to find the right information quickly, whether you are a student, school representative, or member of staff.</p>
+      <h3>Get in Contact</h3>
+      <p>Use the buttons below to direct your enquiry to the right team. Selecting the correct option will ensure your email is signposted to the most relevant contact at Guy’s and St Thomas’ for a faster and more accurate response.</p>
+      <h3>Audio Support</h3>
+      <p>This feature is designed to support users with visual or reading difficulties. When switched on, hovering over a button for 2 seconds will read its name aloud. Use the speaker icon to turn this feature on or off.</p>
+</div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Get in Contact</h2>
+  <div class="button-grid">
+    <a href="mailto:gstt.medicalworkexperience@nhs.uk?subject=Medical%20Work%20Experience" class="contact-button">Medical Work Experience</a>
+    <a href="https://forms.office.com/pages/responsepage.aspx?id=slTDN7CF9UeyIge0jXdO41SnqL5YkSJJmu2JqUZAn5BUOVBVUjlYSEwzODlDVUNJV1lIWEdQTlQzNiQlQCN0PWcu" target="_blank" rel="noopener" class="contact-button">Non-Medical Work Experience</a>
+    <a href="mailto:dentalworkexperience@gstt.nhs.uk?subject=Dental%20Work%20Experience" class="contact-button">Dental Work Experience</a>
+    <a href="mailto:nursingplacements@gstt.nhs.uk?subject=Nursing%20Placement%20Request" class="contact-button">Nursing Placements</a>
+    <a href="mailto:electives@gstt.nhs.uk?subject=Elective%20Placement%20Request" class="contact-button">Elective Placements</a>
+    <a href="mailto:hrss-enquiries@gstt.nhs.uk?subject=Observership%20Request" class="contact-button">Observerships (£250 fee)</a>
+    <a href="mailto:gstt.apprenticeships@nhs.net?subject=Volunteering%20Enquiry" class="contact-button">Apprenticeships</a>
+    <a href="mailto:gstt.voluntaryservices@nhs.net?subject=Volunteering%20Enquiry" class="contact-button">Volunteering</a>
+  </div>
+</div>
+
+<footer>© 2025 Guy's and St Thomas' NHS Foundation Trust. All rights reserved.</footer>
+
+<audio id="clickAudio" src="click.mp3" preload="auto"></audio>
+
+<script>
+let voiceEnabled = false; 
+const voiceToggle = document.getElementById("voiceToggle");
+const voiceIcon = document.getElementById("voiceIcon");
+const audioEl = document.getElementById("clickAudio");
+let audioCtx = null;
+let hoverTimeout = null;
+
+// Toggle voice on/off
+voiceToggle.addEventListener("click", () => {
+    voiceEnabled = !voiceEnabled;
+    voiceToggle.setAttribute("aria-pressed", String(voiceEnabled));
+    voiceIcon.src = voiceEnabled ? "speaker-on.png" : "speaker-off.png";
+    voiceIcon.alt = voiceEnabled ? "Voice On" : "Voice Off";
+});
+
+// Play hover sound
+function playHoverSound() {
+    if (!voiceEnabled) return;
+    if (audioEl) {
+        audioEl.currentTime = 0;
+        audioEl.play().catch(() => playBeepFallback());
+    } else playBeepFallback();
+}
+
+function playBeepFallback() {
+    try {
+        audioCtx = audioCtx || new (window.AudioContext || window.webkitAudioContext)();
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = "sine"; osc.frequency.value = 880;
+        gain.gain.setValueAtTime(0.12, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 0.12);
+        osc.connect(gain); gain.connect(audioCtx.destination);
+        osc.start(); osc.stop(audioCtx.currentTime + 0.12);
+    } catch(e) {}
+}
+
+// Speak custom text
+function speakText(text, type) {
+    if (!voiceEnabled || !window.speechSynthesis) return;
+    let speak = "";
+    if(type==="resource"){
+        if(text==="Work Experience Feedback Form") speak="If you have completed your work experience then please complete the Work Experience feedback form";
+        else if(text==="Further Support") speak="If you have any further questions or need support contact us here";
+        else speak="Find out more about "+text;
+    } else if(type==="contact"){
+        if(text==="Non-Medical Work Experience") speak="Fill out our Non-Medical work experience form";
+        else speak="Click here to contact our staff at "+text;
+    }
+    const utter = new SpeechSynthesisUtterance(speak);
+    utter.rate = 1;
+    speechSynthesis.speak(utter);
+}
+
+// Apply hover audio with 2s delay
+function applyHoverAudio(elements, type) {
+    elements.forEach(el=>{
+        el.addEventListener("mouseenter", ()=>{
+            hoverTimeout = setTimeout(()=>{
+                playHoverSound();
+                speakText(el.textContent.trim(), type);
+            },2000);
+        });
+        el.addEventListener("mouseleave", ()=>{
+            if(hoverTimeout) clearTimeout(hoverTimeout);
+        });
+    });
+}
+
+applyHoverAudio(document.querySelectorAll(".resources-section .button"), "resource");
+applyHoverAudio(document.querySelectorAll(".contact-button"), "contact");
+
+// Search bar
+const searchInput = document.getElementById("searchInput");
+const allButtons = Array.from(document.querySelectorAll(".button, .contact-button"));
+
+// ✅ Create a temporary container dynamically, under the search box
+const searchResults = document.createElement("div");
+searchResults.style.position = "absolute";
+searchResults.style.backgroundColor = "#fff";
+searchResults.style.border = "1px solid #ccc";
+searchResults.style.width = "100%";
+searchResults.style.zIndex = "1000";
+searchResults.style.display = "none";
+
+// Make sure parent is positioned so this container aligns correctly
+searchInput.parentElement.style.position = "relative";
+searchInput.parentElement.appendChild(searchResults);
+
+searchInput.addEventListener("input", () => {
+    const query = searchInput.value.trim().toLowerCase();
+    searchResults.innerHTML = ""; // Clear previous results
+
+    if (query === "") {
+        searchResults.style.display = "none";
+        return;
+    }
+
+    const matches = allButtons.filter(btn => btn.textContent.toLowerCase().includes(query));
+
+    if (matches.length === 0) {
+        const noResult = document.createElement("div");
+        noResult.textContent = "No results found";
+        noResult.style.padding = "0.5rem 1rem";
+        searchResults.appendChild(noResult);
+    } else {
+        // ✅ Here is where your matches.forEach code goes
+      matches.forEach(btn => {
+    const item = document.createElement("div");
+
+    // Find the nearest section heading (h2 or h3) above the button
+    let sectionTitle = "";
+    let parent = btn.parentElement;
+    while (parent) {
+        const heading = parent.querySelector("h2, h3");
+        if (heading) {
+            sectionTitle = heading.textContent.trim();
+            break;
+        }
+        parent = parent.parentElement;
+    }
+
+    // Display section + button text
+    item.innerHTML = `<strong>${sectionTitle}:</strong> ${btn.textContent}`;
+    item.style.padding = "0.5rem 1rem";
+    item.style.cursor = "pointer";
+    item.style.borderBottom = "1px solid #eee";
+    
+    item.addEventListener("mouseenter", () => item.style.backgroundColor = "#f2f2f2");
+    item.addEventListener("mouseleave", () => item.style.backgroundColor = "#fff");
+    item.addEventListener("click", () => {
+        btn.click();
+        searchResults.style.display = "none";
+        searchInput.value = "";
+    });
+
+    searchResults.appendChild(item);
+});
+
+    }
+
+    searchResults.style.display = "block";
+});
+
+searchInput.addEventListener("keydown", e => {
+    if (e.key === "Escape") {
+        searchInput.value = "";
+        searchResults.style.display = "none";
+    }
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const flowUrl = "https://prod-94.westeurope.logic.azure.com:443/workflows/bd05ce304b2c4b76aed6c75412cfcc2b/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=mfkneNIXtvFrgGu0anE9tg-Jy7TwTDznamU_wVMCcJU";
+  const buttons = document.querySelectorAll('.button, .contact-button');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', async (e) => {
+      const buttonName = e.currentTarget.textContent.trim();
+      let sectionTitle = "";
+      let el = e.currentTarget;
+
+      while (el) {
+        if (el.tagName === "H2" || el.tagName === "H3") {
+          sectionTitle = el.textContent.trim();
+          break;
+        }
+        let prev = el.previousElementSibling;
+        while (prev) {
+          if (prev.tagName === "H2" || prev.tagName === "H3") {
+            sectionTitle = prev.textContent.trim();
+            break;
+          }
+          prev = prev.previousElementSibling;
+        }
+        if (sectionTitle) break;
+        el = el.parentElement;
+      }
+
+      const timestamp = new Date().toISOString();
+      const pageUrl = window.location.href;
+      const userAgent = navigator.userAgent;
+
+      try {
+        const res = await fetch(flowUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            buttonName,
+            sectionName: sectionTitle,
+            timestamp,
+            pageUrl,
+            userAgent
+          })
+        });
+        console.log("Flow response:", res.status);
+      } catch (err) {
+        console.error("Fetch error:", err);
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>
