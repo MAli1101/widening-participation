@@ -61,6 +61,19 @@
     height: 650px;
     border-radius: 8px;
   }
+  .intro-text-box {
+  border: 3px solid #005eb8;   /* blue border like the video */
+  border-radius: 12px;
+  padding: 1.5rem;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  flex: 1;                     /* so it shares space with video */
+  min-width: 300px;
+  max-width: 1200px;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  text-align: left;
+}
   .resources-container { display: flex; gap: 2rem; flex-wrap: wrap; }
   .button-list { display: flex; flex-direction: column; gap: 1rem; flex: 1; min-width: 300px; }
   .button { display: flex; justify-content: space-between; align-items: center; background-color: #0078d4; color: white; text-decoration: none; border: 2px solid #0078d4; border-radius: 4px; font-size: 1.1rem; font-weight: bold; padding: 1rem 1.5rem; box-sizing: border-box; cursor: pointer; transition: background-color 0.3s ease, color 0.3s ease; }
@@ -95,24 +108,24 @@
   </button>
 </div>
 </header>
-
 <div class="section intro">
   <h2>Widening Participation</h2>
   <div class="intro-text-align">
-  <!-- Video box on the left -->
-  <div class="intro-video-container">
-    <iframe id="introVideo" 
-            src="https://www.youtube.com/embed/-0XMQTkP87k" 
-            title="YouTube video" 
-            frameborder="0" 
-            allowfullscreen>
-    </iframe>
-  </div>
+    <!-- Video box on the left -->
+    <div class="intro-video-container">
+      <iframe id="introVideo" 
+              src="https://www.youtube.com/embed/-0XMQTkP87k"
+              title="YouTube video"
+              frameborder="0"
+              allowfullscreen>
+      </iframe>
+    </div>
 
-  <!-- Paragraph to the right -->
-  <p>
-      Guy’s and St Thomas’ NHS Foundation Trust is committed to making NHS careers accessible to all, particularly for individuals from underrepresented or disadvantaged backgrounds. Recognising the barriers that can limit access to healthcare professions, the Trust actively works with local schools, colleges, and community organisations to offer meaningful opportunities. Through work experience placements, apprenticeships, internships, and targeted training programmes, participants gain practical skills, knowledge, and confidence to pursue careers in healthcare. These initiatives not only enhance employability but also inspire and empower residents by highlighting the wide range of NHS roles. Guided by our ambitious, inclusive, and caring values, we create accessible pathways that remove barriers, nurture potential, and help build a more representative, compassionate, and socially mobile healthcare workforce for the future.
-    </p>
+    <!-- Text box on the right (replaces the old paragraph) -->
+    <div class="intro-text-box">
+      <p>
+        Guy’s and St Thomas’ NHS Foundation Trust is committed to making NHS careers accessible to all, particularly for individuals from underrepresented or disadvantaged backgrounds. Recognising the barriers that can limit access to healthcare professions, the Trust actively works with local schools, colleges, and community organisations to offer meaningful opportunities. Through work experience placements, apprenticeships, internships, and targeted training programmes, participants gain practical skills, knowledge, and confidence to pursue careers in healthcare. These initiatives not only enhance employability but also inspire and empower residents by highlighting the wide range of NHS roles. Guided by our ambitious, inclusive, and caring values, we create accessible pathways that remove barriers, nurture potential, and help build a more representative, compassionate, and socially mobile healthcare workforce for the future.
+      </p>
     </div>
   </div>
 </div>
@@ -362,6 +375,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 </body>
 </html>
+
 
 
 
